@@ -1,8 +1,11 @@
 // Your JS goes here
 window.onload = function() {
 	createColorBoard();
-	changeColor();
+	// changeColor();
 };
+
+var audio = new Audio('../Sandstorm-DaRude.mp3');
+audio.play();
 
 document.body.style.height = "1000px";
 var body = document.querySelector("body");
@@ -34,7 +37,7 @@ var select = document.getElementsByTagName("div");
 // 	}
 // }
 
-var changeColor = setInterval(generateColors,1000);
+var changeColor = setInterval(generateColors,50);
 
 function createColorBoard () {
 	for(var y = 1; y < 10 ; y++) {
@@ -54,3 +57,6 @@ function generateColors() {
 	 select[i].style.backgroundColor = "rgb("+Math.floor((Math.random()*255))+","+Math.floor((Math.random()*255))+","+Math.floor((Math.random()*255))+")";
 	}
 }
+
+
+
